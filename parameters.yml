@@ -1,0 +1,23 @@
+study:
+        name: 'eq_tracking_spatio-temporal'
+
+data:
+    predict: '3D'
+
+
+model:
+    network_type: 'Equivaraint'
+    optimizer: 'Adam'
+    scheduler: 'CosAn'
+    loss: 'L2'    ##'L2' or 'L1'
+    augmentation: False
+    deformable: True
+    
+
+solver:
+    lr: 0.000025
+    epochs: 2
+    batch_size: 1
+    weight_decay: 0.0001
+    def_weight: 0.5
+
